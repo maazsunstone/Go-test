@@ -20,7 +20,7 @@ func main() {
 
 	router.HandleFunc("/books/{id}", handlers.UpdateBook).Methods(http.MethodPut)
 
-	router.HandleFunc("/books/{id}", handlers.GetAllBooks).Methods(http.MethodDelete)
+	router.HandleFunc("/books/{id}", handlers.DeleteBooks).Methods(http.MethodDelete)
 
 	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode("Hello World!")
